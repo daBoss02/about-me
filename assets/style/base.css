@@ -25,22 +25,26 @@
 /* General                                         */
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-background-color:      var(--app-dark)             ;
+  background-color:    var(--app-dark)             ;
 }
 
 .container {
-  width:                 min(100% - 30px, 1280px)  ;
-  margin-inline:         auto                      ;
+  width:               min(100% - 30px, 1280px)    ;
+  margin-inline:       auto                        ;
 }
 
 h1, h2, h3, p, a {
   color:               var(--app-light)            ;
-  font-weight: 400;
+  font-weight:         400                         ;
 }
 
 header > div, footer > div {
-  display: flex;
+  display:             flex                        ;
 }
 
 .title, header nav, footer .links, footer .copyright {
@@ -117,30 +121,41 @@ h2, h3 {
 /* Main                                            */
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
 
-/* About me                                        */
-.about {
-  display: flex;
-  flex-flow: row wrap;
-  margin-top: 40px;
-  margin-bottom: 40px;
+/* General                                         */
+main {
+  padding-top: 40px;
 }
-.about h2 {
-  width: 100%;
-  margin-bottom: 20px;
+main h2 {
+  width:               100%                        ;
+  margin-bottom:       20px                        ;
 }
+.about, .contact {
+  display:             flex                        ;
+  flex-flow:           row wrap                    ;
+  margin-bottom:       40px                        ;
+}
+
+/* About Me                                        */
 .about .me {
-  width: calc(70% - 30px);
-  margin-right: 60px;
+  width:               calc(70% - 30px)            ;
+  margin-right:        60px                        ;
 }
 .me p {
-  text-indent: 50px;
+  text-indent:         50px                        ;
 }
 .me p + p {
-  margin-top: 20px;
+  margin-top:          20px                        ;
+}
+.me-image {
+  width:               calc(30% - 30px)            ;
 }
 img {
-  width: calc(30% - 30px);
+  border-radius: var(--app-border-radius);
 }
+
+/* Contact Me                                      */
+
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Footer                                          */
@@ -165,16 +180,31 @@ footer .icon {
   display:             grid                        ;
   place-items:         center                      ;
   border-radius:       50%                         ;
+  transition:          background-color 0.25s      ;
 }
-.insta {
-  background-color:    #b349ff36                 ;
-  color:               #b349ff                   ;
+.icon.insta {
+  background-color:    #b249ff36                 ;
+  color:               #b249ff                   ;
   border:              1px solid #b349ff3e       ;
 }
-.mail {
+.icon.insta:hover {
+  background-color:    #b349ff28                 ;
+}
+.icon.mail {
   background-color:    #5849ff36                 ;
   color:               #5749ff                   ;
   border:              1px solid #5749ff3e       ;
+}
+.icon.mail:hover {
+  background-color:    #5849ff28                 ;
+}
+.icon.github {
+  background-color:    #ff574936                 ;
+  color:               #ff5749                   ;
+  border:              1px solid #ff57493e       ;
+}
+.icon.github:hover {
+  background-color:    #ff574928                 ;
 }
 footer a {
   text-decoration:     none                        ;
@@ -187,4 +217,16 @@ footer i {
 .copyright {
   line-height:         var(--app-footer-height)    ;
   text-align:          center                      ;
+}
+
+@media (max-width: 770px) {
+  .about {
+    justify-content: center;
+  }
+  .me {
+    width: 80%;
+  }
+  .me-image {
+    display: none;
+  }
 }
