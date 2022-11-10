@@ -1,0 +1,38 @@
+@import './reset.css';
+
+:root {
+  --app-dark: #1a1d28;
+  --app-light: #f0f2f4;
+  --app-blue: #5749ff;
+  --app-blue-hover: #4535ff;
+  --app-green: #49ff57;
+  --app-red: #ff5749;
+  --app-red-hover: #ff4535;
+  --app-purple: #b249ff;
+  --app-purple-hover: #aa35ff;
+  --app-orange: #ffb249;
+  --app-orange-hover: #ffa221;
+  --app-yellow: #f1ff49;
+
+  --app-header-height: 56px;
+  --app-footer-height: 112px;
+  --app-border-radius: 6px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* General                                         */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+
+body {
+background-color:var(--app-dark);
+}
+
+.container {
+width: min(100% - 30px, 1280px);
+margin-inline: auto;
+}
+
+h1, p {
+  color: #f4f6f8;
+}
+
