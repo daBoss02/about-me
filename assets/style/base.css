@@ -114,6 +114,35 @@ h2, h3 {
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Main                                            */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* About me                                        */
+.about {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.about h2 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.about .me {
+  width: calc(70% - 30px);
+  margin-right: 60px;
+}
+.me p {
+  text-indent: 50px;
+}
+.me p + p {
+  margin-top: 20px;
+}
+img {
+  width: calc(30% - 30px);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Footer                                          */
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -135,7 +164,7 @@ footer .icon {
   height:              45px                        ;
   display:             grid                        ;
   place-items:         center                      ;
-  border-radius: 50%;
+  border-radius:       50%                         ;
 }
 .insta {
   background-color:    #b349ff36                 ;
@@ -145,7 +174,7 @@ footer .icon {
 .mail {
   background-color:    #5849ff36                 ;
   color:               #5749ff                   ;
-  border: 1px solid    #5749ff3e                 ;
+  border:              1px solid #5749ff3e       ;
 }
 footer a {
   text-decoration:     none                        ;
