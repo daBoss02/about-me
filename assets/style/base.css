@@ -34,8 +34,9 @@ background-color:      var(--app-dark)             ;
   margin-inline:         auto                      ;
 }
 
-h1, p, a {
+h1, h2, h3, p, a {
   color:               var(--app-light)            ;
+  font-weight: 400;
 }
 
 header > div, footer > div {
@@ -92,6 +93,24 @@ header a:hover {
 /* General                                         */
 .banner {
   height: calc(100vh - var(--app-header-height) - var(--app-footer-height));
+  background: var(--app-dark) url(../img/frs.jpg) center center / cover no-repeat fixed;
+}
+.darken {
+  height: calc(100vh - var(--app-header-height) - var(--app-footer-height));
+  background-color:    #030022c5                 ;
+  display:             flex                        ;
+  align-items:         center                      ;
+}
+
+/* Hello, World message                            */
+h2 {
+  font-size:           26px                        ;
+}
+h3 {
+  font-size:           20px                        ;
+}
+h2, h3 {
+  letter-spacing:      0.5px                       ;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -109,34 +128,34 @@ footer {
 .links {
   display:             flex                        ;
   gap:                 20px                        ;
-  align-items: center;
+  align-items:         center                      ;
 }
 footer .icon {
   width:               45px                        ;
   height:              45px                        ;
-  display: grid;
-  place-items: center;
+  display:             grid                        ;
+  place-items:         center                      ;
   border-radius: 50%;
 }
 .insta {
   background-color:    #b349ff36                 ;
-  color: #b349ff;
-  border: 1px solid #b349ff3e;
+  color:               #b349ff                   ;
+  border:              1px solid #b349ff3e       ;
 }
 .mail {
   background-color:    #5849ff36                 ;
-  color: #5749ff;
-  border: 1px solid #5749ff3e;
+  color:               #5749ff                   ;
+  border: 1px solid    #5749ff3e                 ;
 }
 footer a {
-  text-decoration: none;
+  text-decoration:     none                        ;
 }
 footer i {
-  font-size: 20px;
+  font-size:           20px                        ;
 }
 
 /* Copyright                                       */
 .copyright {
-  line-height: var(--app-footer-height);
-  text-align: center;
+  line-height:         var(--app-footer-height)    ;
+  text-align:          center                      ;
 }
