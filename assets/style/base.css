@@ -1,22 +1,22 @@
-@import './reset.css';
+@import './reset.css'                              ;
 
 :root {
-  --app-dark: #1a1d28;
-  --app-light: #f0f2f4;
-  --app-blue: #5749ff;
-  --app-blue-hover: #4535ff;
-  --app-green: #49ff57;
-  --app-red: #ff5749;
-  --app-red-hover: #ff4535;
-  --app-purple: #b249ff;
-  --app-purple-hover: #aa35ff;
-  --app-orange: #ffb249;
-  --app-orange-hover: #ffa221;
-  --app-yellow: #f1ff49;
+  --app-dark:          #030022                   ;
+  --app-light:         #f0f2f4                   ;
+  --app-blue:          #5749ff                   ;
+  --app-blue-hover:    #4535ff                   ;
+  --app-green:         #49ff57                   ;
+  --app-red:           #ff5749                   ;
+  --app-red-hover:     #ff4535                   ;
+  --app-purple:        #b249ff                   ;
+  --app-purple-hover:  #aa35ff                   ;
+  --app-orange:        #ffb249                   ;
+  --app-orange-hover:  #ffa221                   ;
+  --app-yellow:        #f1ff49                   ;
 
-  --app-header-height: 56px;
-  --app-footer-height: 112px;
-  --app-border-radius: 6px;
+  --app-header-height: 56px                        ;
+  --app-footer-height: 112px                       ;
+  --app-border-radius: 6px                         ;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -24,15 +24,58 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
 
 body {
-background-color:var(--app-dark);
+background-color:      var(--app-dark)             ;
 }
 
 .container {
-width: min(100% - 30px, 1280px);
-margin-inline: auto;
+width:                 min(100% - 30px, 1280px)    ;
+margin-inline:         auto                        ;
 }
 
-h1, p {
-  color: #f4f6f8;
+h1, p, a {
+  color:               var(--app-light)            ;
 }
 
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Header                                          */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* General                                         */
+header {
+  height:              var(--app-header-height)    ;
+  background-color:    var(--app-purple)           ;
+}
+header div {
+  display: flex;
+}
+
+/* Title                                           */
+header h1 {
+  line-height:         var(--app-header-height)    ;
+  font-weight:         400                         ;
+  font-size:           26px                        ;
+  letter-spacing:      0.6px                       ;
+}
+header div .title {
+  width:               50%                         ;
+}
+
+/* Links                                           */
+header nav {
+  width:               50%                         ;
+  text-align:          center                      ;
+}
+header li + li {
+  margin-left:         20px                        ;
+}
+header li, a {
+  list-style:          none                        ;
+  text-decoration:     none                        ;
+  display:             inline                      ;
+  line-height:         var(--app-header-height)    ;
+  letter-spacing: 0.5px;
+}
+a:hover {
+  text-decoration:     underline                   ;
+}
