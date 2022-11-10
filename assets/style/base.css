@@ -1,7 +1,9 @@
-@import './reset.css'                              ;
+@import './reset.css';
 
 :root {
   --app-dark:          #030022                   ;
+  --app-footer-color:  #08071b                   ;
+  --app-footer-border: #f0f2f444                 ;
   --app-light:         #f0f2f4                   ;
   --app-blue:          #5749ff                   ;
   --app-blue-hover:    #4535ff                   ;
@@ -28,14 +30,21 @@ background-color:      var(--app-dark)             ;
 }
 
 .container {
-width:                 min(100% - 30px, 1280px)    ;
-margin-inline:         auto                        ;
+  width:                 min(100% - 30px, 1280px)  ;
+  margin-inline:         auto                      ;
 }
 
 h1, p, a {
   color:               var(--app-light)            ;
 }
 
+header > div, footer > div {
+  display: flex;
+}
+
+.title, header nav, footer .links, footer .copyright {
+  width:               50%                         ;
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Header                                          */
@@ -46,9 +55,6 @@ header {
   height:              var(--app-header-height)    ;
   background-color:    var(--app-purple)           ;
 }
-header div {
-  display: flex;
-}
 
 /* Title                                           */
 header h1 {
@@ -57,25 +63,80 @@ header h1 {
   font-size:           26px                        ;
   letter-spacing:      0.6px                       ;
 }
-header div .title {
-  width:               50%                         ;
-}
 
 /* Links                                           */
 header nav {
-  width:               50%                         ;
-  text-align:          right                       ;
+  text-align:          center                      ;
 }
 header li + li {
   margin-left:         20px                        ;
 }
-header li, a {
+header li, header a {
   list-style:          none                        ;
   text-decoration:     none                        ;
   display:             inline                      ;
   line-height:         var(--app-header-height)    ;
-  letter-spacing: 0.5px;
 }
-a:hover {
+li a {
+  letter-spacing:      0.5px                       ;
+  font-weight:         600                         ;
+}
+header a:hover {
   text-decoration:     underline                   ;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Banner                                          */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* General                                         */
+.banner {
+  height: calc(100vh - var(--app-header-height) - var(--app-footer-height));
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Footer                                          */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* General                                         */
+footer {
+  height:              var(--app-footer-height)    ;
+  background-color:    var(--app-footer-color)     ;
+  border-top: 1px solid var(--app-footer-border)   ;
+}
+
+/* Icons                                           */
+.links {
+  display:             flex                        ;
+  gap:                 20px                        ;
+  align-items: center;
+}
+footer .icon {
+  width:               45px                        ;
+  height:              45px                        ;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.insta {
+  background-color:    #b349ff36                 ;
+  color: #b349ff;
+  border: 1px solid #b349ff3e;
+}
+.mail {
+  background-color:    #5849ff36                 ;
+  color: #5749ff;
+  border: 1px solid #5749ff3e;
+}
+footer a {
+  text-decoration: none;
+}
+footer i {
+  font-size: 20px;
+}
+
+/* Copyright                                       */
+.copyright {
+  line-height: var(--app-footer-height);
+  text-align: center;
 }
