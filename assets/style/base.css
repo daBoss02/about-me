@@ -47,7 +47,7 @@ header > div, footer > div {
   display:             flex                        ;
 }
 
-.title, header nav, footer .links, footer .copyright {
+.title, header nav, .links, .copyright {
   width:               50%                         ;
 }
 
@@ -89,6 +89,17 @@ li a {
 header a:hover {
   text-decoration:     underline                   ;
 }
+span {
+  display: none;
+  background-color: #03002236;
+  border: 1px solid #0300223e;
+  line-height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+span:focus {
+  background-color: #03002272;
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Banner                                          */
@@ -129,7 +140,7 @@ main h2 {
   width:               100%                        ;
   margin-bottom:       20px                        ;
 }
-.about, .contact {
+.about, .socials {
   display:             flex                        ;
   flex-flow:           row wrap                    ;
   margin-bottom:       40px                        ;
@@ -142,6 +153,7 @@ main h2 {
 }
 .me p {
   text-indent:         50px                        ;
+  transition: justtify-content 0.25s ease-in;
 }
 .me p + p {
   margin-top:          20px                        ;
@@ -173,8 +185,9 @@ footer {
   display:             flex                        ;
   gap:                 20px                        ;
   align-items:         center                      ;
+  flex-flow: row wrap;
 }
-footer .icon {
+.icon {
   width:               45px                        ;
   height:              45px                        ;
   display:             grid                        ;
@@ -223,10 +236,53 @@ footer i {
   .about {
     justify-content: center;
   }
-  .me {
+  .about p {
+    text-indent: 0px;
+  }
+  .about .me {
     width: 80%;
   }
   .me-image {
     display: none;
+  }
+  .extra {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 20px;
+  }
+  header .title {
+    width: 65%;
+  }
+  header nav {
+    text-align: right;
+    width: 35%;
+  }
+  nav li + li {
+    margin-left: 10px;
+  }
+  li p {
+    display: none;
+  }
+  li span {
+    display: inline-block;
+    text-align: center;
+  }
+  .about .me {
+    width: 100%;
+  }
+  .links {
+    gap: 5px;
+    width: 100%;
+  }
+  .copyright {
+    display: flex;
+    padding-top: 10px;
+    height: 100%;
+    line-height: normal;
+    font-size: 14px;
   }
 }
