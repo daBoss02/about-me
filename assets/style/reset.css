@@ -51,6 +51,10 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Keeps users from highlighting lists, links, iframes, figures, images and buttons */
 li, a, i, figure, img, button, p,
 input[type=button], input[type=submit] {
