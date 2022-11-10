@@ -64,7 +64,7 @@ header div .title {
 /* Links                                           */
 header nav {
   width:               50%                         ;
-  text-align:          center                      ;
+  text-align:          right                       ;
 }
 header li + li {
   margin-left:         20px                        ;
