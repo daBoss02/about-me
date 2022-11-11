@@ -21,6 +21,9 @@
   --app-border-radius: 6px                         ;
 }
 
+* {
+  transition: all 0.25s ease-in-out;
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
 /* General                                         */
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
