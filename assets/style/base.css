@@ -180,11 +180,13 @@ img {
 .ico {
   width: 40px;
   height: 40px;
+  line-height: 42px;
   margin-bottom: 10px;
   margin-right: 10px;
   display: grid;
   place-items: center;
   border-radius: 50%;
+  padding-top: 2px;
 }
 .contact p:hover {
   text-decoration: underline;
@@ -197,6 +199,9 @@ img {
 }
 .three {
   animation-delay: 0.4s;
+}
+.four {
+  animation-delay: 0.3s;
 }
 @keyframes bounce {
   0%, 100% {
@@ -233,28 +238,36 @@ footer {
   border-radius:       50%                         ;
   transition:          background-color 0.25s      ;
 }
-.insta {
+.github {
   background-color:    #b249ff36                 ;
   color:               #b249ff                   ;
   border:              1px solid #b349ff3e       ;
 }
-.insta:hover {
+.github:hover {
   background-color:    #b349ff28                 ;
 }
-.mail {
-  background-color:    #5849ff36                 ;
+.insta {
+  background-color:    #ffb24936                 ;
+  color:               #ffb249                   ;
+  border:              1px solid #ffb2493e       ;
+}
+.insta:hover {
+  background-color:    #ffb24928                 ;
+}
+.linkedin {
+  background-color:    #5749ff36                 ;
   color:               #5749ff                   ;
   border:              1px solid #5749ff3e       ;
 }
-.mail:hover {
-  background-color:    #5849ff28                 ;
+.linkedin:hover {
+  background-color:    #5749ff28                 ;
 }
-.github {
+.mail {
   background-color:    #ff574936                 ;
   color:               #ff5749                   ;
   border:              1px solid #ff57493e       ;
 }
-.github:hover {
+.mail:hover {
   background-color:    #ff574928                 ;
 }
 footer a {
@@ -272,55 +285,55 @@ footer i {
 
 @media (max-width: 770px) {
   .about {
-    justify-content: center;
+    justify-content:   center                      ;
   }
   .about p {
-    text-indent: 0px;
+    text-indent:       0px                         ;
   }
   .about .me {
-    width: 80%;
+    width:             80%                         ;
   }
   .me-image {
-    display: none;
+    display:           none                        ;
   }
   .extra {
-    display: none;
+    display:           none                        ;
   }
 }
 
 @media (max-width: 500px) {
   header h1 {
-    font-size: 20px;
+    font-size:         20px                        ;
   }
   header .title {
-    width: 65%;
+    width:             65%                         ;
   }
   header nav {
-    text-align: right;
-    width: 35%;
+    text-align:        right                       ;
+    width:             35%                         ;
   }
   nav li + li {
-    margin-left: 10px;
+    margin-left:       10px                        ;
   }
   li p {
-    display: none;
+    display:           none                        ;
   }
   li span {
-    display: inline-block;
-    text-align: center;
+    display:           inline-block                ;
+    text-align:        center                      ;
   }
   .about .me {
-    width: 100%;
+    width:             100%                        ;
   }
   .links {
-    gap: 5px;
-    width: 100%;
+    gap:               5px                         ;
+    width:             100%                        ;
   }
   .copyright {
-    display: flex;
-    padding-top: 10px;
-    height: 100%;
-    line-height: normal;
-    font-size: 14px;
+    display:           flex                        ;
+    padding-top:       10px                        ;
+    height:            100%                        ;
+    line-height:       normal                      ;
+    font-size:         14px                        ;
   }
 }
